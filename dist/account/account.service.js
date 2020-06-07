@@ -16,6 +16,8 @@ exports.AccountService = void 0;
 const mongoose_1 = require("mongoose");
 const common_1 = require("@nestjs/common");
 const mongoose_2 = require("@nestjs/mongoose");
+const utils_1 = require("../utils");
+const common_2 = require("../common");
 let AccountService = (() => {
     let AccountService = class AccountService {
         constructor(accountModel) {
@@ -40,35 +42,36 @@ let AccountService = (() => {
             return await this.accountModel.findOne({ username });
         }
         async getListAccount(getlistDto) {
-            const sortOrder = getlistDto.sort[0].split(",");
+            const query = utils_1.convertQueryParams(getlistDto);
+            query._filter["userType"] = { $not: { $eq: "ADMIN" } };
             const result = await this.accountModel
-                .find({ userType: { $not: { $eq: "ADMIN" } } }, { password: 0 })
-                .skip(parseInt(getlistDto.offset))
-                .limit(parseInt(getlistDto.limit))
-                .sort([[sortOrder[0], sortOrder[1] === "ASC" ? -1 : 1]]);
+                .find(query._filter, { password: 0 })
+                .skip(query._offset)
+                .limit(query._limit)
+                .sort(query._sort);
             const total = await this.accountModel.count({});
             return {
                 data: result,
                 total
             };
         }
-        async deleteAccount(deleteAccountDto) {
-            const result = await this.accountModel.deleteOne(deleteAccountDto);
+        async deleteAccount(deleteDto) {
+            const result = await this.accountModel.deleteOne(deleteDto);
             return result;
         }
-        async getAccount(getAccountDto) {
-            const result = await this.accountModel.findOne(getAccountDto, { password: 0 });
+        async getAccount(getDto) {
+            const result = await this.accountModel.findOne(getDto, { password: 0 });
             return {
                 data: result
             };
         }
-        async updateAccount(getAccountDto, updateAccountDto) {
+        async updateAccount(getADto, updateAccountDto) {
             if (updateAccountDto.userType = "MINISTRY") {
                 updateAccountDto.desc = "";
                 updateAccountDto.website = "";
                 updateAccountDto.fax = "";
             }
-            const result = await this.accountModel.updateOne(getAccountDto, updateAccountDto);
+            const result = await this.accountModel.updateOne(getADto, updateAccountDto);
             return {
                 data: result
             };

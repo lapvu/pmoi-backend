@@ -1,6 +1,16 @@
 export class GetListDto {
-    limit: any;
-    page: any;
-    sort: any;
-    offset: any;
+    _end: string;
+    _start: string;
+    _order: string;
+    _sort: string;
+    id: string;
+    q: string;
+}
+
+export class DeleteDto {
+    _id: string;
+}
+
+export class GetDto {
+    _id: string;
 }

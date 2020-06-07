@@ -19,10 +19,8 @@ const account_service_1 = require("./account.service");
 const jwt_auth_guard_1 = require("../auth/guards/jwt-auth.guard");
 const roles_decorator_1 = require("../auth/decorators/roles.decorator");
 const roles_guard_1 = require("../auth/guards/roles.guard");
-const list_account_dto_1 = require("./dto/list-account.dto");
-const delete_account_dto_1 = require("./dto/delete-account.dto");
-const get_account_dto_1 = require("./dto/get-account.dto");
 const update_account_dto_1 = require("./dto/update-account.dto");
+const common_2 = require("../common");
 let AccountController = (() => {
     let AccountController = class AccountController {
         constructor(accountService) {
@@ -34,8 +32,8 @@ let AccountController = (() => {
         async getList(getListDto) {
             return await this.accountService.getListAccount(getListDto);
         }
-        async getAccount(getAccountDto) {
-            return await this.accountService.getAccount(getAccountDto);
+        async getAccount(getDto) {
+            return await this.accountService.getAccount(getDto);
         }
         async delete(deleteAccountDto) {
             return await this.accountService.deleteAccount(deleteAccountDto);
@@ -57,7 +55,7 @@ let AccountController = (() => {
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
         __param(0, common_1.Query()),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [list_account_dto_1.GetListDto]),
+        __metadata("design:paramtypes", [common_2.GetListDto]),
         __metadata("design:returntype", Promise)
     ], AccountController.prototype, "getList", null);
     __decorate([
@@ -66,7 +64,7 @@ let AccountController = (() => {
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
         __param(0, common_1.Param()),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [get_account_dto_1.GetAccountDto]),
+        __metadata("design:paramtypes", [common_2.GetDto]),
         __metadata("design:returntype", Promise)
     ], AccountController.prototype, "getAccount", null);
     __decorate([
@@ -75,7 +73,7 @@ let AccountController = (() => {
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
         __param(0, common_1.Param()),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [delete_account_dto_1.DeleteAccountDto]),
+        __metadata("design:paramtypes", [common_2.DeleteDto]),
         __metadata("design:returntype", Promise)
     ], AccountController.prototype, "delete", null);
     __decorate([
@@ -84,7 +82,7 @@ let AccountController = (() => {
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
         __param(0, common_1.Param()), __param(1, common_1.Body()),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [get_account_dto_1.GetAccountDto, update_account_dto_1.UpdateAccountDto]),
+        __metadata("design:paramtypes", [common_2.GetDto, update_account_dto_1.UpdateAccountDto]),
         __metadata("design:returntype", Promise)
     ], AccountController.prototype, "update", null);
     AccountController = __decorate([
