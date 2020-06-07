@@ -34,7 +34,7 @@ exports.ProjectSchema = new mongoose.Schema({
         type: String
     },
     place: {
-        type: String
+        type: [String]
     },
     approvedInvestment: {
         type: String
@@ -48,7 +48,7 @@ exports.ProjectSchema = new mongoose.Schema({
     initInvestmentTime: {
         type: Date
     },
-    childProject: [{
+    childProjects: [{
             name: { type: String },
             investors: {
                 type: mongoose.Schema.Types.ObjectId,

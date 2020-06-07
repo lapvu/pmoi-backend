@@ -47,11 +47,6 @@ let AccountService = (() => {
                 .limit(parseInt(getlistDto.limit))
                 .sort([[sortOrder[0], sortOrder[1] === "ASC" ? -1 : 1]]);
             const total = await this.accountModel.count({});
-            if (result.length === 0)
-                throw new common_1.HttpException({
-                    status: common_1.HttpStatus.NO_CONTENT,
-                    error: 'No content',
-                }, common_1.HttpStatus.NO_CONTENT);
             return {
                 data: result,
                 total

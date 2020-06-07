@@ -1,44 +1,52 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProjectSchema = void 0;
-const mongoose = require("mongoose");
-const randomString = require("randomstring");
-exports.ProjectSchema = new mongoose.Schema({
+import * as mongoose from 'mongoose';
+import * as randomString from "randomstring"
+export const ProjectSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
     },
+    //dia chi kho bac
     treasuryAddress: {
         type: String,
         required: true
     },
+    //map
     map: {
         type: String
     },
+    //thoi gian thi cong
     constructionTime: {
         type: String
     },
+    //thoi gian hoan thanh
     completionTime: {
         type: String,
     },
+    //hinh thuc quan ly
     managementForm: {
         type: String
     },
+    //loai nguon von
     typeSource: {
         type: String
     },
+    //mo ta du an
     desc: {
         type: String,
     },
+    //tong muc dau tu
     totalInvestment: {
         type: String
     },
+    //dia diem thuc hien
     place: {
-        type: String
+        type: [String]
     },
+    //QD duyệt chủ trương đầu tư
     approvedInvestment: {
         type: String
     },
+    //QD dự án đầu tư ban đầu
     initInvestment: {
         type: String
     },
@@ -48,13 +56,13 @@ exports.ProjectSchema = new mongoose.Schema({
     initInvestmentTime: {
         type: Date
     },
-    childProject: [{
-            name: { type: String },
-            investors: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Account'
-            }
-        }],
+    childProjects: [{
+        name: { type: String },
+        investors: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Account'
+        }
+    }],
     _id: {
         type: String,
         default: randomString.generate({
@@ -63,4 +71,3 @@ exports.ProjectSchema = new mongoose.Schema({
         })
     }
 }, { timestamps: { createdAt: "created_at" } });
-//# sourceMappingURL=project.schema.js.map

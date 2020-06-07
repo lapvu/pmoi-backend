@@ -11,7 +11,7 @@ const common_1 = require("@nestjs/common");
 const projects_service_1 = require("./projects.service");
 const projects_controller_1 = require("./projects.controller");
 const mongoose_1 = require("@nestjs/mongoose");
-const project_schema_1 = require("./schemas/project.schema");
+const project_schema_1 = require("./schema/project.schema");
 let ProjectsModule = (() => {
     let ProjectsModule = class ProjectsModule {
     };

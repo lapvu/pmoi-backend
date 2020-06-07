@@ -1,5 +1,5 @@
 import { Model } from 'mongoose';
-import { Injectable, NotFoundException, HttpException, HttpStatus, } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Account } from './interfaces/account.interface';
 import { CreateAccountDto } from './dto/create-account.dto';
@@ -40,10 +40,6 @@ export class AccountService {
             .limit(parseInt(getlistDto.limit))
             .sort([[sortOrder[0], sortOrder[1] === "ASC" ? -1 : 1]]);
         const total = await this.accountModel.count({});
-        if (result.length === 0) throw new HttpException({
-            status: HttpStatus.NO_CONTENT,
-            error: 'No content',
-        }, HttpStatus.NO_CONTENT)
         return {
             data: result,
             total
