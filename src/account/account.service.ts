@@ -48,8 +48,28 @@ export class AccountService {
         };
     }
 
+    async getListInvestor(getlistDto: GetListDto): Promise<any> {
+        const query = convertQueryParams(getlistDto);
+        query._filter["accountType"] = "INVESTOR"
+        const result = await this.accountModel
+            .find(query._filter, { password: 0 })
+            .skip(query._offset)
+            .limit(query._limit)
+            .sort(query._sort);
+        const total = await this.accountModel.count(query._filter);
+        return {
+            data: result,
+            total
+        };
+    }
+
     async deleteAccount(deleteDto: DeleteDto): Promise<any> {
         const result = await this.accountModel.deleteOne(deleteDto);
+        return result;
+    }
+
+    async deleteInvestor(deleteDto: DeleteDto): Promise<any> {
+        const result = await this.accountModel.deleteOne({ ...deleteDto, accountType: "INVESTOR" });
         return result;
     }
 
@@ -60,8 +80,22 @@ export class AccountService {
         };
     }
 
+    async getInvestor(getDto: GetDto): Promise<any> {
+        const result = await this.accountModel.findOne({ ...getDto, accountType: "INVESTOR" }, { password: 0 });
+        return {
+            data: result
+        };
+    }
+
     async updateAccount(getADto: GetDto, updateAccountDto: UpdateAccountDto): Promise<any> {
         const result = await this.accountModel.updateOne(getADto, updateAccountDto)
+        return {
+            data: result
+        }
+    }
+
+    async updateInvestor(getADto: GetDto, updateAccountDto: UpdateAccountDto): Promise<any> {
+        const result = await this.accountModel.updateOne({ ...getADto, accountType: "INVESTOR" }, updateAccountDto)
         return {
             data: result
         }

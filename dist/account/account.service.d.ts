@@ -9,7 +9,11 @@ export declare class AccountService {
     create(createAccountDto: CreateAccountDto): Promise<Account>;
     findOneByUsername(username: any): Promise<Account>;
     getListAccount(getlistDto: GetListDto): Promise<any>;
+    getListInvestor(getlistDto: GetListDto): Promise<any>;
     deleteAccount(deleteDto: DeleteDto): Promise<any>;
+    deleteInvestor(deleteDto: DeleteDto): Promise<any>;
     getAccount(getDto: GetDto): Promise<any>;
+    getInvestor(getDto: GetDto): Promise<any>;
     updateAccount(getADto: GetDto, updateAccountDto: UpdateAccountDto): Promise<any>;
+    updateInvestor(getADto: GetDto, updateAccountDto: UpdateAccountDto): Promise<any>;
 }

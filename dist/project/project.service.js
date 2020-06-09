@@ -27,12 +27,12 @@ let ProjectService = (() => {
             const query = utils_1.convertQueryParams(getlistDto);
             const result = await this.projectModel
                 .find(query._filter)
-                .populate("childProjects.investor", "displayName")
-                .populate("investor", "displayName")
+                .populate("childProjects.investor", "investorName")
+                .populate("investor", "investorName")
                 .skip(query._offset)
                 .limit(query._limit)
                 .sort(query._sort);
-            const total = await this.projectModel.count({});
+            const total = await this.projectModel.count(query._filter);
             return {
                 data: result,
                 total
@@ -44,8 +44,8 @@ let ProjectService = (() => {
         }
         async getProject(getProjectdto) {
             const result = await this.projectModel.findOne(getProjectdto)
-                .populate("childProjects.investor", "displayName")
-                .populate("investor", "displayName");
+                .populate("childProjects.investor", "investorName")
+                .populate("investor", "investorName");
             return {
                 data: result
             };

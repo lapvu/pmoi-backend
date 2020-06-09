@@ -58,8 +58,26 @@ let AccountService = (() => {
                 total
             };
         }
+        async getListInvestor(getlistDto) {
+            const query = utils_1.convertQueryParams(getlistDto);
+            query._filter["accountType"] = "INVESTOR";
+            const result = await this.accountModel
+                .find(query._filter, { password: 0 })
+                .skip(query._offset)
+                .limit(query._limit)
+                .sort(query._sort);
+            const total = await this.accountModel.count(query._filter);
+            return {
+                data: result,
+                total
+            };
+        }
         async deleteAccount(deleteDto) {
             const result = await this.accountModel.deleteOne(deleteDto);
+            return result;
+        }
+        async deleteInvestor(deleteDto) {
+            const result = await this.accountModel.deleteOne(Object.assign(Object.assign({}, deleteDto), { accountType: "INVESTOR" }));
             return result;
         }
         async getAccount(getDto) {
@@ -68,8 +86,20 @@ let AccountService = (() => {
                 data: result
             };
         }
+        async getInvestor(getDto) {
+            const result = await this.accountModel.findOne(Object.assign(Object.assign({}, getDto), { accountType: "INVESTOR" }), { password: 0 });
+            return {
+                data: result
+            };
+        }
         async updateAccount(getADto, updateAccountDto) {
             const result = await this.accountModel.updateOne(getADto, updateAccountDto);
+            return {
+                data: result
+            };
+        }
+        async updateInvestor(getADto, updateAccountDto) {
+            const result = await this.accountModel.updateOne(Object.assign(Object.assign({}, getADto), { accountType: "INVESTOR" }), updateAccountDto);
             return {
                 data: result
             };

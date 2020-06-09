@@ -2272,8 +2272,8 @@
         "affectsGlobalScope": false
       },
       "../src/account/account.service.ts": {
-        "version": "8e2485bc17b7308efc840978b5ed7d4861bddfa1694f892de1ba0818faecc06a",
-        "signature": "8477107841e8f8201a4568d580f189500e6f52c979ce2241b35c2c0ea4baa017",
+        "version": "e50373519e0478c57a57ee5ddd0dc2b09ecc9d6f1beae7dd98281d44f8453502",
+        "signature": "fbe58aeadcffe1ed57309736e9c970d1cd73feaa24892a0aef3ea3d39b61e8e2",
         "affectsGlobalScope": false
       },
       "../src/auth/interfaces/jwt-payload.interface.ts": {
@@ -2527,7 +2527,7 @@
         "affectsGlobalScope": false
       },
       "../src/project/project.service.ts": {
-        "version": "c89506ba1525bc3370960149c7cbda1640faa28065f93806d0ef762574b2547a",
+        "version": "569abd70d03a948551715340d2a3681473efdd2f570f763a2ca740769c1fba63",
         "signature": "1e20226247e7de231a14a3008400f6deec2cb8faa4deb0342c0ce3092141f03a",
         "affectsGlobalScope": false
       },
@@ -2537,7 +2537,7 @@
         "affectsGlobalScope": false
       },
       "../src/project/schema/project.schema.ts": {
-        "version": "553361bd5fe87728ae42d757d93384042fa42546daafabe8c4cb2107f5354214",
+        "version": "8cc2dc0e106ca27a56f2f6d86154cb499be04edb36495cad7d13d5f9d63cfb0d",
         "signature": "b7a9a5f81210082ea64a7a7988e1ffed37ecd543660a4ecea9fb17de2e233416",
         "affectsGlobalScope": false
       },
@@ -2546,8 +2546,23 @@
         "signature": "5ffa43aafa81e68b563669ac5df289500f271d5f9381f1e6ca9340ebd4d3290e",
         "affectsGlobalScope": false
       },
+      "../src/investor/investor.service.ts": {
+        "version": "cd6e536d24082354a0530c97365a47709b116a8b0a756a2cdbbbf0294b45753e",
+        "signature": "c2c7c92b9c3aaaff2ca19fd613c5bf58d214abacf14ed951696eca847ba1ec56",
+        "affectsGlobalScope": false
+      },
+      "../src/investor/investor.controller.ts": {
+        "version": "1a439bf42b0ab39cde992c6a82424c2ab25fcf0dd8c3ab021ffdee0cddea92c1",
+        "signature": "14d06fbdbb4196b072a45c07d673f46eb8708bb220c481e13dd5c29527e02b6c",
+        "affectsGlobalScope": false
+      },
+      "../src/investor/investor.module.ts": {
+        "version": "4738585d0d6d961df2d24b682af9929ff118233fcc80fbf4126587b1620b089d",
+        "signature": "6f1d6073b557346d76f3c6425947ece532818a60f3830ccd2392c7b85caa4a79",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "e3d447c9c71e1d23900e50bffb920d2599f62b88cbfcefb348d38bf8ab232729",
+        "version": "5d42e2b1ecf5479ec13a9ef4a57d88871d95dcbafbe6af564f0c279b1aabf0a0",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -7589,6 +7604,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/account/account.module.ts",
         "../src/auth/auth.module.ts",
+        "../src/investor/investor.module.ts",
         "../src/project/project.module.ts"
       ],
       "../src/auth/auth.controller.ts": [
@@ -7694,6 +7710,40 @@
         "../src/common/dto/index.ts"
       ],
       "../src/configs/configuration.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/investor/investor.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/account/account.service.ts",
+        "../src/account/dto/create-account.dto.ts",
+        "../src/account/dto/update-account.dto.ts",
+        "../src/auth/decorators/roles.decorator.ts",
+        "../src/auth/guards/jwt-auth.guard.ts",
+        "../src/auth/guards/roles.guard.ts",
+        "../src/common/index.ts"
+      ],
+      "../src/investor/investor.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/account/account.module.ts",
+        "../src/investor/investor.controller.ts",
+        "../src/investor/investor.service.ts"
+      ],
+      "../src/investor/investor.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -12528,6 +12578,13 @@
       ],
       "../src/common/index.ts": [
         "../src/common/dto/index.ts"
+      ],
+      "../src/investor/investor.controller.ts": [
+        "../src/account/account.service.ts",
+        "../src/account/dto/create-account.dto.ts",
+        "../src/account/dto/update-account.dto.ts",
+        "../src/account/interfaces/account.interface.ts",
+        "../src/common/index.ts"
       ],
       "../src/project/project.controller.ts": [
         "../src/common/index.ts",

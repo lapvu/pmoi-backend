@@ -50,7 +50,7 @@ exports.ProjectSchema = new mongoose.Schema({
     },
     childProjects: [{
             name: { type: String },
-            investor: {
+            investorName: {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: 'Account'
             },
