@@ -13,7 +13,7 @@ exports.convertQueryParams = (getListDto) => {
         _limit: _end - _start,
         _offset: _start,
         _sort: {
-            [_sort === "id" ? "_id" : _sort]: _order === "ASC" ? 1 : -1
+            [_sort === "id" ? "_id" : _sort]: _order === "ASC" ? -1 : 1
         },
         _filter: _id || q || {}
     };

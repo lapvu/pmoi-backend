@@ -29,11 +29,7 @@ let CreateAccountDto = (() => {
     __decorate([
         class_validator_1.IsString(),
         __metadata("design:type", String)
-    ], CreateAccountDto.prototype, "displayName", void 0);
-    __decorate([
-        class_validator_1.IsString(),
-        __metadata("design:type", String)
-    ], CreateAccountDto.prototype, "userType", void 0);
+    ], CreateAccountDto.prototype, "accountType", void 0);
     return CreateAccountDto;
 })();
 exports.CreateAccountDto = CreateAccountDto;

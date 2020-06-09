@@ -7,16 +7,11 @@ export class CreateAccountDto {
     @IsString()
     password: string;
 
-    roles: [string];
-
     @IsEmail()
     email: string;
 
     @IsString()
-    displayName: string;
-
-    @IsString()
-    userType: string;
+    accountType: string;
 
     address: string;
 
@@ -27,4 +22,10 @@ export class CreateAccountDto {
     website: string;
 
     desc: string;
+
+    investorName: string;
+
+    ministryName: string;
+
+    roles: [string];
 }

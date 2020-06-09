@@ -9,10 +9,9 @@ export class UpdateAccountDto {
     email: string;
 
     @IsString()
-    displayName: string;
+    accountType: string;
 
-    @IsString()
-    userType: string;
+    investorName: string;
 
     address: string;
 

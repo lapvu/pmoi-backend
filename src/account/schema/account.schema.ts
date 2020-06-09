@@ -2,6 +2,17 @@ import * as mongoose from 'mongoose';
 import * as bcrypt from 'bcrypt';
 
 export const AccountSchema = new mongoose.Schema({
+    ministryName: {
+        type: String,
+        default: "Bộ Nông nghiệp và Phát triển nông thôn"
+    },
+    investorName: {
+        type: String,
+        trim: true,
+        index: true,
+        unique: true,
+        sparse: true
+    },
     username: {
         type: String,
         unique: true,
@@ -14,10 +25,6 @@ export const AccountSchema = new mongoose.Schema({
     email: {
         type: String,
         unique: true,
-        required: true
-    },
-    displayName: {
-        type: String,
         required: true
     },
     address: {
@@ -34,7 +41,7 @@ export const AccountSchema = new mongoose.Schema({
         default: ["INVESTOR"],
         required: true
     },
-    userType: {
+    accountType: {
         type: String,
         default: "INVESTOR"
     },
@@ -47,15 +54,15 @@ export const AccountSchema = new mongoose.Schema({
 }, { timestamps: { createdAt: "created_at" } });
 
 AccountSchema.pre<any>('save', function (next) {
-    let user = this;
-    user.userType === "INVESTOR" ? user.roles = ["INVESTOR"] : null
-    user.userType === "MINISTRY" ? user.roles = ["MINISTRY"] : null
-    if (!user.isModified('password')) return next();
+    let account = this;
+    account.accountType === "INVESTOR" ? account.roles = ["INVESTOR"] : null
+    account.accountType === "MINISTRY" ? account.roles = ["MINISTRY"] : null
+    if (!account.isModified('password')) return next();
     bcrypt.genSalt(10, (err, salt) => {
         if (err) return next(err);
-        bcrypt.hash(user.password, salt, (err, hash) => {
+        bcrypt.hash(account.password, salt, (err, hash) => {
             if (err) return next(err);
-            user.password = hash;
+            account.password = hash;
             next();
         });
     });

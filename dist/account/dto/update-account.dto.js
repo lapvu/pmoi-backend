@@ -21,11 +21,7 @@ let UpdateAccountDto = (() => {
     __decorate([
         class_validator_1.IsString(),
         __metadata("design:type", String)
-    ], UpdateAccountDto.prototype, "displayName", void 0);
-    __decorate([
-        class_validator_1.IsString(),
-        __metadata("design:type", String)
-    ], UpdateAccountDto.prototype, "userType", void 0);
+    ], UpdateAccountDto.prototype, "accountType", void 0);
     return UpdateAccountDto;
 })();
 exports.UpdateAccountDto = UpdateAccountDto;

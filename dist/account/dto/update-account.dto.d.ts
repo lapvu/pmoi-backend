@@ -1,8 +1,8 @@
 export declare class UpdateAccountDto {
     roles: [string];
     email: string;
-    displayName: string;
-    userType: string;
+    accountType: string;
+    investorName: string;
     address: string;
     phoneNumber: number;
     fax: string;

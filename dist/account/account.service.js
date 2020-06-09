@@ -35,6 +35,9 @@ let AccountService = (() => {
                 if (err.code === 11000 && err.keyPattern.email === 1) {
                     throw new common_1.NotFoundException("Email đã tồn tại!");
                 }
+                if (err.code === 11000 && err.keyPattern.investorName === 1) {
+                    throw new common_1.NotFoundException("Chủ đầu tư đã tồn tại!");
+                }
                 throw new common_1.NotFoundException(err);
             }
         }
@@ -43,13 +46,13 @@ let AccountService = (() => {
         }
         async getListAccount(getlistDto) {
             const query = utils_1.convertQueryParams(getlistDto);
-            query._filter["userType"] = { $not: { $eq: "ADMIN" } };
+            query._filter["accountType"] = { $not: { $eq: "ADMIN" } };
             const result = await this.accountModel
                 .find(query._filter, { password: 0 })
                 .skip(query._offset)
                 .limit(query._limit)
                 .sort(query._sort);
-            const total = await this.accountModel.count({});
+            const total = await this.accountModel.count(query._filter);
             return {
                 data: result,
                 total
@@ -66,11 +69,6 @@ let AccountService = (() => {
             };
         }
         async updateAccount(getADto, updateAccountDto) {
-            if (updateAccountDto.userType = "MINISTRY") {
-                updateAccountDto.desc = "";
-                updateAccountDto.website = "";
-                updateAccountDto.fax = "";
-            }
             const result = await this.accountModel.updateOne(getADto, updateAccountDto);
             return {
                 data: result
