@@ -18,13 +18,81 @@ const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const common_2 = require("../common");
 const utils_1 = require("../utils");
+const notification_service_1 = require("../notification/notification.service");
 let ProjectService = (() => {
     let ProjectService = class ProjectService {
-        constructor(projectModel) {
+        constructor(projectModel, notificationService) {
             this.projectModel = projectModel;
+            this.notificationService = notificationService;
         }
-        async getListProject(getlistDto) {
+        async getListProject(getlistDto, user) {
             const query = utils_1.convertQueryParams(getlistDto);
+            if (user.accountType === "INVESTOR") {
+                query._filter["$or"] = [{ investor: user._id }, { "childProjects.investor": user._id }];
+                const data = await this.projectModel.aggregate([
+                    {
+                        $unwind: {
+                            path: "$childProjects",
+                            preserveNullAndEmptyArrays: true
+                        }
+                    },
+                    {
+                        $match: query._filter
+                    },
+                    {
+                        $skip: query._offset
+                    },
+                    {
+                        $limit: query._limit
+                    },
+                    {
+                        $sort: query._sort
+                    },
+                    {
+                        $project: {
+                            name: {
+                                $cond: {
+                                    if: { $eq: ["$childProjects", null] },
+                                    then: "$name",
+                                    else: "$childProjects.name"
+                                }
+                            },
+                            _id: {
+                                $cond: {
+                                    if: { $eq: ["$childProjects", null] },
+                                    then: "$_id",
+                                    else: "$childProjects._id"
+                                }
+                            },
+                            desc: {
+                                $cond: {
+                                    if: { $eq: ["$childProjects", null] },
+                                    then: "$desc",
+                                    else: "$childProjects.desc"
+                                }
+                            },
+                            approvedInvestment: 1,
+                            approvedInvestmentTime: 1,
+                            initInvestment: 1,
+                            initInvestmentTime: 1,
+                            treasuryAddress: 1,
+                            totalInvestment: 1,
+                            constructionTime: 1,
+                            completionTime: 1,
+                            managementForm: 1,
+                            typeSource: 1,
+                            created_at: 1,
+                            place: 1,
+                            parentId: "$_id",
+                            parentProjectName: "$name",
+                        }
+                    }
+                ]);
+                return {
+                    data,
+                    total: data.length
+                };
+            }
             const result = await this.projectModel
                 .find(query._filter)
                 .populate("childProjects.investor", "investorName")
@@ -38,9 +106,10 @@ let ProjectService = (() => {
                 total
             };
         }
-        async createProject(createProjectDto) {
+        async createProject(createProjectDto, _id) {
             const project = new this.projectModel(createProjectDto);
-            return await project.save();
+            const result = await project.save();
+            return result;
         }
         async getProject(getProjectdto) {
             const result = await this.projectModel.findOne(getProjectdto)
@@ -54,13 +123,16 @@ let ProjectService = (() => {
             return await this.projectModel.deleteOne(deleteDto);
         }
         async updateProject(getProjectdto, updateProjectDto) {
-            return await this.projectModel.updateOne(getProjectdto, updateProjectDto);
+            let data = await this.projectModel.updateOne(getProjectdto, updateProjectDto);
+            return {
+                data
+            };
         }
     };
     ProjectService = __decorate([
         common_1.Injectable(),
         __param(0, mongoose_1.InjectModel('Project')),
-        __metadata("design:paramtypes", [mongoose_2.Model])
+        __metadata("design:paramtypes", [mongoose_2.Model, notification_service_1.NotificationService])
     ], ProjectService);
     return ProjectService;
 })();

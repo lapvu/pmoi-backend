@@ -9,12 +9,14 @@ export declare class AuthService {
     validateUserByPassword(loginAttempt: LoginDto): Promise<{
         expiresIn: number;
         roles: any;
+        _id: any;
         token: string;
     }>;
     validateUserByJwt(payload: JwtPayload): Promise<import("../account/interfaces/account.interface").Account>;
     createJwtPayload(user: any): {
         expiresIn: number;
         roles: any;
+        _id: any;
         token: string;
     };
 }

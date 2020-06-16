@@ -6,6 +6,7 @@ export declare class AuthController {
     login(loginDto: LoginDto): Promise<{
         expiresIn: number;
         roles: any;
+        _id: any;
         token: string;
     }>;
 }

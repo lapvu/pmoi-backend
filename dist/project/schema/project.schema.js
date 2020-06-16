@@ -1,8 +1,61 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProjectSchema = void 0;
+exports.ProjectSchema = exports.ChildProjectSchema = exports.PortfolioSchema = exports.ReportSchema = void 0;
 const mongoose = require("mongoose");
-const randomString = require("randomstring");
+exports.ReportSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    body: {
+        type: String
+    },
+    attachment: {
+        type: Object,
+    },
+    investor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Account'
+    },
+}, { timestamps: { createdAt: "created_at" } });
+exports.PortfolioSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    builder: {
+        type: String
+    },
+    winBidTime: {
+        type: Date
+    },
+    attachment: {
+        type: Object
+    },
+    desc: {
+        type: String
+    },
+    project: {
+        type: String,
+        ref: "Project"
+    }
+}, { timestamps: { createdAt: "created_at" } });
+exports.ChildProjectSchema = new mongoose.Schema({
+    name: { type: String },
+    investor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Account'
+    },
+    desc: { type: String },
+    portfolios: [{
+            type: exports.PortfolioSchema,
+            default: null
+        }],
+    reports: [{
+            type: exports.ReportSchema,
+            default: null
+        }]
+}, { timestamps: { createdAt: "created_at" } });
 exports.ProjectSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -49,27 +102,24 @@ exports.ProjectSchema = new mongoose.Schema({
         type: Date
     },
     childProjects: [{
-            name: { type: String },
-            investorName: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Account'
-            },
-            desc: { type: String }
+            type: exports.ChildProjectSchema,
+            default: null
         }],
-    _id: {
-        type: String,
-        default: randomString.generate({
-            length: 7,
-            charset: "numeric"
-        })
-    },
     investor: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Account'
     },
     hasChildProject: {
         type: Boolean
-    }
+    },
+    reports: [{
+            type: exports.ReportSchema,
+            default: null
+        }],
+    portfolios: [{
+            type: exports.PortfolioSchema,
+            default: null
+        }]
 }, { timestamps: { createdAt: "created_at" } });
 exports.ProjectSchema.pre('save', function (next) {
     let project = this;

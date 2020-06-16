@@ -1,5 +1,62 @@
 import * as mongoose from 'mongoose';
-import * as randomString from "randomstring"
+
+export const ReportSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    body: {
+        type: String
+    },
+    attachment: {
+        type: Object,
+    },
+    investor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Account'
+    },
+}, { timestamps: { createdAt: "created_at" } })
+
+export const PortfolioSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    builder: {
+        type: String
+    },
+    winBidTime: {
+        type: Date
+    },
+    attachment: {
+        type: Object
+    },
+    desc: {
+        type: String
+    },
+    project: {
+        type: String,
+        ref: "Project"
+    }
+}, { timestamps: { createdAt: "created_at" } });
+
+export const ChildProjectSchema = new mongoose.Schema({
+    name: { type: String },
+    investor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Account'
+    },
+    desc: { type: String },
+    portfolios: [{
+        type: PortfolioSchema,
+        default: null
+    }],
+    reports: [{
+        type: ReportSchema,
+        default: null
+    }]
+}, { timestamps: { createdAt: "created_at" } })
+
 export const ProjectSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -57,29 +114,25 @@ export const ProjectSchema = new mongoose.Schema({
         type: Date
     },
     childProjects: [{
-        name: { type: String },
-        investorName: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Account'
-        },
-        desc: { type: String }
+        type: ChildProjectSchema,
+        default: null
     }],
-    _id: {
-        type: String,
-        default: randomString.generate({
-            length: 7,
-            charset: "numeric"
-        })
-    },
     investor: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Account'
     },
     hasChildProject: {
         type: Boolean
-    }
+    },
+    reports: [{
+        type: ReportSchema,
+        default: null
+    }],
+    portfolios: [{
+        type: PortfolioSchema,
+        default: null
+    }]
 }, { timestamps: { createdAt: "created_at" } });
-
 
 ProjectSchema.pre<any>('save', function (next) {
     let project = this;

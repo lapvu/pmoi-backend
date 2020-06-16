@@ -13,6 +13,7 @@ export class InvestorController {
     constructor(private accountService: AccountService) { }
     @Post()
     @Roles("MINISTRY")
+    @UseGuards(JwtAuthGuard, RolesGuard)
     async create(@Body() createAccountDto: CreateAccountDto) {
         return await this.accountService.create(createAccountDto);
     }

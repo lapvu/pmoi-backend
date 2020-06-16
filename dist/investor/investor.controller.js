@@ -45,6 +45,7 @@ let InvestorController = (() => {
     __decorate([
         common_1.Post(),
         roles_decorator_1.Roles("MINISTRY"),
+        common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
         __param(0, common_1.Body()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [create_account_dto_1.CreateAccountDto]),

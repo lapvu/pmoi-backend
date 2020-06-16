@@ -6,6 +6,7 @@ import { CreateAccountDto } from './dto/create-account.dto';
 import { UpdateAccountDto } from './dto/update-account.dto';
 import { convertQueryParams } from "src/utils"
 import { GetListDto, DeleteDto, GetDto } from 'src/common';
+
 @Injectable()
 export class AccountService {
 

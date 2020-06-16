@@ -49,12 +49,14 @@ let AuthService = (() => {
         createJwtPayload(user) {
             let data = {
                 username: user.username,
-                roles: user.roles
+                roles: user.roles,
+                _id: user._id
             };
             let jwt = this.jwtService.sign(data);
             return {
                 expiresIn: 18000,
                 roles: user.roles,
+                _id: user._id,
                 token: jwt
             };
         }

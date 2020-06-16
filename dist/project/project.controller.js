@@ -25,11 +25,11 @@ let ProjectController = (() => {
         constructor(projectsService) {
             this.projectsService = projectsService;
         }
-        async getList(getListDto) {
-            return await this.projectsService.getListProject(getListDto);
+        async getList(getListDto, req) {
+            return await this.projectsService.getListProject(getListDto, req.user);
         }
-        async createProject(createProjectDto) {
-            return await this.projectsService.createProject(createProjectDto);
+        async createProject(createProjectDto, req) {
+            return await this.projectsService.createProject(createProjectDto, req.user._id);
         }
         async getProject(getProjectDto) {
             return await this.projectsService.getProject(getProjectDto);
@@ -43,25 +43,23 @@ let ProjectController = (() => {
     };
     __decorate([
         common_1.Get(),
-        roles_decorator_1.Roles("ADMIN", "MINISTRY"),
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
-        __param(0, common_1.Query()),
+        __param(0, common_1.Query()), __param(1, common_1.Request()),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [common_2.GetListDto]),
+        __metadata("design:paramtypes", [common_2.GetListDto, Object]),
         __metadata("design:returntype", Promise)
     ], ProjectController.prototype, "getList", null);
     __decorate([
         common_1.Post(),
         roles_decorator_1.Roles("ADMIN", "MINISTRY"),
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
-        __param(0, common_1.Body()),
+        __param(0, common_1.Body()), __param(1, common_1.Request()),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [create_project_dto_1.CreateProjectDto]),
+        __metadata("design:paramtypes", [create_project_dto_1.CreateProjectDto, Object]),
         __metadata("design:returntype", Promise)
     ], ProjectController.prototype, "createProject", null);
     __decorate([
         common_1.Get(":_id"),
-        roles_decorator_1.Roles("ADMIN", "MINISTRY"),
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
         __param(0, common_1.Param()),
         __metadata("design:type", Function),

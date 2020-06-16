@@ -2267,23 +2267,23 @@
         "affectsGlobalScope": false
       },
       "../src/utils/index.ts": {
-        "version": "f7d2045c1d0fe32cbb7d1cb4be10fd2c180ed923787a37a4c4d897d31df86458",
+        "version": "c4e900e58f6dda92a5c1d07ebc42a55ecee487a798e8f75661d1e81c25491a6f",
         "signature": "ed9f0b6fc08f51b4b7f1c794b1c2f743717931b39d583d7a5cb8b291d8b3e2ba",
         "affectsGlobalScope": false
       },
       "../src/account/account.service.ts": {
-        "version": "e50373519e0478c57a57ee5ddd0dc2b09ecc9d6f1beae7dd98281d44f8453502",
+        "version": "68c3e1f64cb5b1075040252ba4c6114b39f2dc279e21acaf02e49789458c604c",
         "signature": "fbe58aeadcffe1ed57309736e9c970d1cd73feaa24892a0aef3ea3d39b61e8e2",
         "affectsGlobalScope": false
       },
       "../src/auth/interfaces/jwt-payload.interface.ts": {
-        "version": "a858a774bfc9fbe892976ec143c97322dabb565bb68c61cb03b5da19a62b56c9",
-        "signature": "93e464e602d20dd030a136bfa828562a20970288e8759dc8827883832385eaf4",
+        "version": "bcaf844696c85a0775427073f9aafe6fc8a73b3c37a963fa65897f702c965924",
+        "signature": "44739207d22b0016770c3dd0b60ed388010d503b0bd688684f153eef1bb5d651",
         "affectsGlobalScope": false
       },
       "../src/auth/auth.service.ts": {
-        "version": "b8be48ae36ee85f12f973b83e3d646f85779690fa94f751d63c9f9316d420be9",
-        "signature": "97e53f0da61e5f2c685a95ad7b65f2a6233ecbe4d16a1fdc26d61e6a93481913",
+        "version": "a26fff16146d394c71ef55dc69cf2b22f0188dfacc1ba626643c225b2bbe9276",
+        "signature": "7498a7ff6e2ddf11778a0c6aea06028d25a20a71d83a55dbbd0b19ad114c0c78",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -2297,13 +2297,13 @@
         "affectsGlobalScope": false
       },
       "../src/auth/jwt.strategy.ts": {
-        "version": "b1230ceb708846967a08bebc8a51a128823c4ee21f1eeaf825a9ab24cbdd0ddf",
-        "signature": "ec7feeda7cfdc99453c0965556c3e40873f5a28b28f4a569db6d2060dad299db",
+        "version": "bf74509a8e6fc4434287499feb154085dfab91ef24ee0015ca7d682413c63445",
+        "signature": "43d8960d6596a0e452b141dd9760ba00c8ebf508638be9554fa150a99f747cd9",
         "affectsGlobalScope": false
       },
       "../src/auth/auth.controller.ts": {
         "version": "ddf5dd2345d4fb25d07a022d436cd03b5fd0a7be4d0e2763922867345e57eef5",
-        "signature": "e1de2baf67ebcf7a08b2f9df495f68aa04b04ef5920806c4f254fcbf2aa3f48f",
+        "signature": "f9a4c6321ffa9a901912c761885c029dd0826087eb00cb9da2c2dea99abccf26",
         "affectsGlobalScope": false
       },
       "../src/auth/guards/jwt-auth.guard.ts": {
@@ -2511,8 +2511,58 @@
         "signature": "e6109fb7465b6bbb459688f0b36d0c14d535900a752c7f7e81f8f34d5349b299",
         "affectsGlobalScope": false
       },
+      "../node_modules/@types/caseless/index.d.ts": {
+        "version": "5343f3c160282dfbaab9af350119a0c3b59b7076ef0117bb5995a66e240dab28",
+        "signature": "5343f3c160282dfbaab9af350119a0c3b59b7076ef0117bb5995a66e240dab28",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/request/node_modules/form-data/index.d.ts": {
+        "version": "e91ad231af87f864b3f07cd0e39b1cf6c133988156f087c1c3ccb0a5491c9115",
+        "signature": "e91ad231af87f864b3f07cd0e39b1cf6c133988156f087c1c3ccb0a5491c9115",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/tough-cookie/index.d.ts": {
+        "version": "a6c4cc913246a4f40423d0c6e618239072d7662bd54f6d8b8be59aec55d59873",
+        "signature": "a6c4cc913246a4f40423d0c6e618239072d7662bd54f6d8b8be59aec55d59873",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/request/index.d.ts": {
+        "version": "d3c7c28e24c242c1054c6865bb6704914dfdb212063701c6fb02a8a477d00098",
+        "signature": "d3c7c28e24c242c1054c6865bb6704914dfdb212063701c6fb02a8a477d00098",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/pusher/index.d.ts": {
+        "version": "dae0ff27e592293fb5c6d56e1226f6e8a9ca3ea783932e9a405b6b26866bd3ec",
+        "signature": "dae0ff27e592293fb5c6d56e1226f6e8a9ca3ea783932e9a405b6b26866bd3ec",
+        "affectsGlobalScope": false
+      },
+      "../src/notification/dto/create-notification.dto.ts": {
+        "version": "1cd04b6dc6ea38b3bb34b127a882a4f4b1c8c58958b9c250a0491d3451c513c4",
+        "signature": "eca06619cfa5313abccb42924c4d73fe348f3d52af6b9010738b06efb3f4163d",
+        "affectsGlobalScope": false
+      },
+      "../src/notification/notification.service.ts": {
+        "version": "aea5c3cbb6c5469d8da89a5ba08e07be99c21524ad0ca90106c9eb725e63ec4e",
+        "signature": "4458c0cfe2147be9a15d30a750fccbb721a54417b02cb4155b2c9445b53ef1bb",
+        "affectsGlobalScope": false
+      },
+      "../src/notification/notification.controller.ts": {
+        "version": "fd0ea5caac82fe4b7e37b655a2c169d7edc87459488a8b7b54b1e432357575ed",
+        "signature": "6f848fdf0fcb82b8aafbbead28ba6256a2221a2a37938f0bfc948857684bc295",
+        "affectsGlobalScope": false
+      },
+      "../src/notification/schema/notification.schema.ts": {
+        "version": "fee293a7fb1f15f5179d10062b109a2237e74fbdc066c936f29da1b2ea831b62",
+        "signature": "8e421c0a41a1234ca6fc9ccf305519dff2ad704291c2100ceef426f3e280f3e7",
+        "affectsGlobalScope": false
+      },
+      "../src/notification/notification.module.ts": {
+        "version": "9caa64bfeae87920f11a2a5a3be8d3bab98b954e8568bbecdcd52db2aaa71fd4",
+        "signature": "2bb936018a74923d7e1f44f4c3bd52b4d450b5bea6e50a082dc89c85d6a6caf4",
+        "affectsGlobalScope": false
+      },
       "../src/account/account.module.ts": {
-        "version": "36c5cc7b71895f6b975d2887f33c557a146938e343984e01a65b25dbec0f1c8b",
+        "version": "f4a1353b9f12672ff9153df705559bb095baf311a0191439fc9d2e9819413dcb",
         "signature": "5dca972e1047709adf5566a809d8f6db3e7eb1b2e4836cddae9f8237b7773903",
         "affectsGlobalScope": false
       },
@@ -2527,22 +2577,27 @@
         "affectsGlobalScope": false
       },
       "../src/project/project.service.ts": {
-        "version": "569abd70d03a948551715340d2a3681473efdd2f570f763a2ca740769c1fba63",
-        "signature": "1e20226247e7de231a14a3008400f6deec2cb8faa4deb0342c0ce3092141f03a",
+        "version": "b77ff9a5c1cc6f0cbebfd679c1ff0cfae1ddb7f26de8dba2ec510ae8a3262393",
+        "signature": "494b78a108224b38d460d2a3541e083fa2c4bc81fe616386109e04a91f957a99",
         "affectsGlobalScope": false
       },
       "../src/project/project.controller.ts": {
-        "version": "e8d99af37d86ca99da16f0f092c90bd48af948ed0864f5dc096447dd78f99d5d",
-        "signature": "e3358d0f99d454e6533e2b0aace6f042be522d7e723a3816b4dedb1295a9e6d3",
+        "version": "f72aae824a88e31bed85821465c873cec7e4e82b820e37fe60f1a91b4dc1007d",
+        "signature": "1aa83345dd1f490f8b7a64fb3c72e6115bf1dbc1857fb5ef6fb3e9e03482f0cf",
         "affectsGlobalScope": false
       },
       "../src/project/schema/project.schema.ts": {
-        "version": "8cc2dc0e106ca27a56f2f6d86154cb499be04edb36495cad7d13d5f9d63cfb0d",
-        "signature": "b7a9a5f81210082ea64a7a7988e1ffed37ecd543660a4ecea9fb17de2e233416",
+        "version": "125d32a6716c6f360659e9de3415111c132461d2a6dc88427b3a123adabea2f9",
+        "signature": "3e0732c4c2d4b49a1f320b3b3031f71cbd5a6b175627f2e1f515746519851f4b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/mongoose-plugin-autoinc/lib/index.d.ts": {
+        "version": "4930a609262ee2175dcc94205094d23e39d4923082dbff0bc05e968acdfe6a21",
+        "signature": "4930a609262ee2175dcc94205094d23e39d4923082dbff0bc05e968acdfe6a21",
         "affectsGlobalScope": false
       },
       "../src/project/project.module.ts": {
-        "version": "a906409face4cf67286c68d1ebd944f6499afe991227cf0e6d52b7459664a205",
+        "version": "8b04420b6623628c9d1fb03cf2971f1f8f55b10d706faff27d84a22d7c6a969b",
         "signature": "5ffa43aafa81e68b563669ac5df289500f271d5f9381f1e6ca9340ebd4d3290e",
         "affectsGlobalScope": false
       },
@@ -2552,7 +2607,7 @@
         "affectsGlobalScope": false
       },
       "../src/investor/investor.controller.ts": {
-        "version": "1a439bf42b0ab39cde992c6a82424c2ab25fcf0dd8c3ab021ffdee0cddea92c1",
+        "version": "4dbd51b1382b5b419c922b7caa7a75f0f4d4cbdbf732ffc87f295cc9d1bd2309",
         "signature": "14d06fbdbb4196b072a45c07d673f46eb8708bb220c481e13dd5c29527e02b6c",
         "affectsGlobalScope": false
       },
@@ -2561,8 +2616,163 @@
         "signature": "6f1d6073b557346d76f3c6425947ece532818a60f3830ccd2392c7b85caa4a79",
         "affectsGlobalScope": false
       },
+      "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts": {
+        "version": "b87682ddc9e2c3714ca66991cdd86ff7e18cae6fd010742a93bd612a07d19697",
+        "signature": "b87682ddc9e2c3714ca66991cdd86ff7e18cae6fd010742a93bd612a07d19697",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts": {
+        "version": "7c9fb139cfddf0c42ca4a839f30bb78f13908774e48dbbbfbf69387af2ef6c13",
+        "signature": "7c9fb139cfddf0c42ca4a839f30bb78f13908774e48dbbbfbf69387af2ef6c13",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/adapters/index.d.ts": {
+        "version": "86bf2bfe29d0bc3fbc68e64c25ea6eab9bcb3c518ae941012ed75b1e87d391ae",
+        "signature": "86bf2bfe29d0bc3fbc68e64c25ea6eab9bcb3c518ae941012ed75b1e87d391ae",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts": {
+        "version": "8b584341b20cfcdaf8e47f5b91b1d5bfae1cc1be94941b4ccec6cf07f1017950",
+        "signature": "8b584341b20cfcdaf8e47f5b91b1d5bfae1cc1be94941b4ccec6cf07f1017950",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/interfaces/index.d.ts": {
+        "version": "68a330d1246e3f0ed055b931ab6f4f9505d7c2db0560515f68c722c06541dc0d",
+        "signature": "68a330d1246e3f0ed055b931ab6f4f9505d7c2db0560515f68c722c06541dc0d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts": {
+        "version": "8ae337fcd337d5ca179611dae780e7dbb45b3c0cbc6debc5067a4215e95cd873",
+        "signature": "8ae337fcd337d5ca179611dae780e7dbb45b3c0cbc6debc5067a4215e95cd873",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts": {
+        "version": "00427e68be5cbfd0694c650ebf27dc9d5cb8ec62254ca5af0cd3e412595f8d09",
+        "signature": "00427e68be5cbfd0694c650ebf27dc9d5cb8ec62254ca5af0cd3e412595f8d09",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts": {
+        "version": "6a013828e3333e21fde3a4d1c7da0c41e8ce0218a98ad8e71025c2d437a2458b",
+        "signature": "6a013828e3333e21fde3a4d1c7da0c41e8ce0218a98ad8e71025c2d437a2458b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts": {
+        "version": "fc1a967ceb559957a8fd153d364596d7c906440c401e9a1f0ef9cda62a92a937",
+        "signature": "fc1a967ceb559957a8fd153d364596d7c906440c401e9a1f0ef9cda62a92a937",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts": {
+        "version": "fd09f594933708040bbab2ad98fdfd1f076209ff0d514cbc8ab50bc39f462619",
+        "signature": "fd09f594933708040bbab2ad98fdfd1f076209ff0d514cbc8ab50bc39f462619",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts": {
+        "version": "6db46ed9adeb732a2c46b05dd64a3fe85b2789065f1ef7668f583c61f1046a14",
+        "signature": "6db46ed9adeb732a2c46b05dd64a3fe85b2789065f1ef7668f583c61f1046a14",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts": {
+        "version": "7bb8a371f7790a421606678b50a943955bfc182beca2c42f8d1473cc2973fa12",
+        "signature": "7bb8a371f7790a421606678b50a943955bfc182beca2c42f8d1473cc2973fa12",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts": {
+        "version": "d8c1697db4bb3234ff3f8481545284992f1516bc712421b81ee3ef3f226ae112",
+        "signature": "d8c1697db4bb3234ff3f8481545284992f1516bc712421b81ee3ef3f226ae112",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts": {
+        "version": "549adfb8fb51148eeb2c0659941b3a508988ee0b00f325fbaae7e96bc4b3e4c9",
+        "signature": "549adfb8fb51148eeb2c0659941b3a508988ee0b00f325fbaae7e96bc4b3e4c9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/multer/index.d.ts": {
+        "version": "e2c3c3ca3818d610599392a9431e60ec021c5d59262ecd616538484990f6e331",
+        "signature": "e2c3c3ca3818d610599392a9431e60ec021c5d59262ecd616538484990f6e331",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@nestjs/platform-express/index.d.ts": {
+        "version": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c",
+        "signature": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c",
+        "affectsGlobalScope": false
+      },
+      "../src/report/dto/create-report.dto.ts": {
+        "version": "ee839040e03b58fe8f29788e10caa42b13c4f5885a90eb5c9b640f318326b8e4",
+        "signature": "b49d973ac0152152c4a5f86f7dff25032ffedc01df09cbe181a888a61ebbe393",
+        "affectsGlobalScope": false
+      },
+      "../src/report/report.service.ts": {
+        "version": "491a62d14685988a89b1d1ee6827b4fc1765bfee06bdc0640dd1e14e949fa8da",
+        "signature": "3abdcbc72519accbd987bc39f0ee9af0c614468b02d98b88a7fd2189b655a116",
+        "affectsGlobalScope": false
+      },
+      "../src/report/report.controller.ts": {
+        "version": "582e9b5c73a2a2ec080956de9dec0057ea7eb8823cd52fd74fee9ccacb78f8be",
+        "signature": "f0e023b876d837c142fd21ad1870b3d27a18b43241aa617c53da4088a3c093ed",
+        "affectsGlobalScope": false
+      },
+      "../src/report/report.module.ts": {
+        "version": "6e2589509d66ad96a76e6af3fdc257b50f0dd49b7798864a4928650e007da6a6",
+        "signature": "1d2496fba065118a2d60bdd6ba08d62d6c1ece23333b1c6b73f17deab982f5f2",
+        "affectsGlobalScope": false
+      },
+      "../src/investment/investment.service.ts": {
+        "version": "f6d60120a67173df3c4cb26a263893abf436c7164a6b9e7fb23037367de2eb01",
+        "signature": "e886e8f9ff418790216194817ae098e08f83742b98254b20af46989cf8ee5e9f",
+        "affectsGlobalScope": false
+      },
+      "../src/investment/investment.controller.ts": {
+        "version": "40bd49b5f2cbfe077e0ab26028d99a133347bc3a7361b4e3767831f06551d092",
+        "signature": "653d823d59be3cb8a55f184d28e9d3b999d64b3f8c9865558be09589f4301ebc",
+        "affectsGlobalScope": false
+      },
+      "../src/investment/investment.module.ts": {
+        "version": "fb80567c394adde543838d83152355547f487a1d8a69e2aa06002180b0581390",
+        "signature": "94856ff5c67489cbc9c12767112472cb0e23ec0b3f602f59df9c3c1c43a1ce62",
+        "affectsGlobalScope": false
+      },
+      "../src/portfolio/dto/create-portfolio.dto.ts": {
+        "version": "77e3297611ff9ca940f293358b7f8905ae29b406e3eab66b237322fb901b7971",
+        "signature": "bc646c1f065d2424bf0a58a96a464987a692a4e06ec3d97be3f9e1448789b5c1",
+        "affectsGlobalScope": false
+      },
+      "../src/portfolio/dto/update-portfolio.dto.ts": {
+        "version": "e62b99ac172e49cc15ac149962bd04d9772f6d30408f9d91a78e3d8d34b565d4",
+        "signature": "3e4db8dec23455f9663212d4ddfeb7087fc212e9af4fcd1397b2ab6fe6506647",
+        "affectsGlobalScope": false
+      },
+      "../src/portfolio/portfolio.service.ts": {
+        "version": "cd4fb5cdea899f2327d9534721b106f0fb4f8db658a947b2cecb241f44c08676",
+        "signature": "134972d519d80d2e1ccf7796c70759b2328b070437d7d556a66a963d466545cb",
+        "affectsGlobalScope": false
+      },
+      "../src/portfolio/portfolio.controller.ts": {
+        "version": "b1586f050bc073894b0ebc242a6e66a92b7d09eb89a43bdb7dd880c678634cd9",
+        "signature": "a744ad78e0a78cdaf911b92a0a607fdf5e0d4b17998d1587b54184b570d84965",
+        "affectsGlobalScope": false
+      },
+      "../src/portfolio/portfolio.module.ts": {
+        "version": "84b32bf1914fc4a063d5955af40ba01fbfb878aa6e16abc67871ec9d527b859a",
+        "signature": "feb15935438bd2a56aab6bd312711a8e2231c332724f255914c08f40ff767cba",
+        "affectsGlobalScope": false
+      },
+      "../src/guest/guest.service.ts": {
+        "version": "df1127558eeaf34ec13325b608a1212520708a5f26a05c0e14dced6354dac409",
+        "signature": "9753bb954ff0f2e47055a126e69f58fbb5fb347e65641951c60653d09a19d372",
+        "affectsGlobalScope": false
+      },
+      "../src/guest/guest.controller.ts": {
+        "version": "1973000bb7f17ad029847639de2d2024e7bc7e324a805c01b85862e75de64bd4",
+        "signature": "775a9a4f024813203f510c344ace7c80bd3d5160b0091a064eb2163da431f12c",
+        "affectsGlobalScope": false
+      },
+      "../src/guest/guest.module.ts": {
+        "version": "64cc9de8f0b6c859844d95271c07e63868a598c2b450e7a770c5d82443a67951",
+        "signature": "2cceb3005066a9e3f9fd05754db9b0ace2b855dcdc042e7b853fe20533142d7e",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "5d42e2b1ecf5479ec13a9ef4a57d88871d95dcbafbe6af564f0c279b1aabf0a0",
+        "version": "791175e30b4e1eab89675a2e05321e3f904d41a717d674c4c8da3d60961bd5e3",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -2582,6 +2792,11 @@
         "affectsGlobalScope": false
       },
       "../src/configs/configuration.ts": {
+        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "affectsGlobalScope": false
+      },
+      "../src/investment/dto/create-investment.dto.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
@@ -2629,6 +2844,11 @@
       "../node_modules/@types/cookiejar/index.d.ts": {
         "version": "16b7fb094ffaa5d270f934e7406e8baee2f8245cfabf6dcc20f693389f005f56",
         "signature": "16b7fb094ffaa5d270f934e7406e8baee2f8245cfabf6dcc20f693389f005f56",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/debug/index.d.ts": {
+        "version": "3cf5f191d75bbe7c92f921e5ae12004ac672266e2be2ece69f40b1d6b1b678f9",
+        "signature": "3cf5f191d75bbe7c92f921e5ae12004ac672266e2be2ece69f40b1d6b1b678f9",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/eslint-visitor-keys/index.d.ts": {
@@ -4622,6 +4842,152 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts",
+        "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/adapters/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/adapters/index.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/ts3.7/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/@types/anymatch/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -4684,6 +5050,13 @@
         "../node_modules/@types/node/ts3.7/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@types/caseless/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/@types/color-name/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -4701,6 +5074,13 @@
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@types/cookiejar/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/debug/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -5332,6 +5712,33 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@types/request/index.d.ts": [
+        "../node_modules/@types/caseless/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/ts3.7/index.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/request/node_modules/form-data/index.d.ts",
+        "../node_modules/@types/tough-cookie/index.d.ts"
+      ],
+      "../node_modules/@types/request/node_modules/form-data/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/ts3.7/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/@types/serve-static/index.d.ts": [
         "../node_modules/@types/express-serve-static-core/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -5375,6 +5782,13 @@
         "../node_modules/@types/superagent/index.d.ts"
       ],
       "../node_modules/@types/tapable/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/tough-cookie/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -6622,6 +7036,14 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/mongoose-plugin-autoinc/lib/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -6636,6 +7058,14 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/pusher/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/request/index.d.ts"
       ],
       "../node_modules/reflect-metadata/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -7530,7 +7960,8 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/account/account.controller.ts",
         "../src/account/account.service.ts",
-        "../src/account/schema/account.schema.ts"
+        "../src/account/schema/account.schema.ts",
+        "../src/notification/notification.module.ts"
       ],
       "../src/account/account.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -7604,8 +8035,13 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/account/account.module.ts",
         "../src/auth/auth.module.ts",
+        "../src/guest/guest.module.ts",
+        "../src/investment/investment.module.ts",
         "../src/investor/investor.module.ts",
-        "../src/project/project.module.ts"
+        "../src/notification/notification.module.ts",
+        "../src/portfolio/portfolio.module.ts",
+        "../src/project/project.module.ts",
+        "../src/report/report.module.ts"
       ],
       "../src/auth/auth.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -7716,6 +8152,72 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/guest/guest.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/account/account.service.ts",
+        "../src/common/index.ts",
+        "../src/project/project.service.ts"
+      ],
+      "../src/guest/guest.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/account/account.module.ts",
+        "../src/guest/guest.controller.ts",
+        "../src/guest/guest.service.ts",
+        "../src/project/project.module.ts"
+      ],
+      "../src/guest/guest.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/investment/dto/create-investment.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/investment/investment.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/investment/investment.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/investment/investment.controller.ts",
+        "../src/investment/investment.service.ts",
+        "../src/project/project.module.ts"
+      ],
+      "../src/investment/investment.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/project/project.service.ts"
+      ],
       "../src/investor/investor.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -7759,6 +8261,112 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/app.module.ts"
       ],
+      "../src/notification/dto/create-notification.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/notification/notification.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/auth/guards/jwt-auth.guard.ts",
+        "../src/auth/guards/roles.guard.ts",
+        "../src/notification/notification.service.ts"
+      ],
+      "../src/notification/notification.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/notification/notification.controller.ts",
+        "../src/notification/notification.service.ts",
+        "../src/notification/schema/notification.schema.ts"
+      ],
+      "../src/notification/notification.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/pusher/index.d.ts",
+        "../src/notification/dto/create-notification.dto.ts"
+      ],
+      "../src/notification/schema/notification.schema.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/portfolio/dto/create-portfolio.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/portfolio/dto/update-portfolio.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/portfolio/portfolio.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/auth/decorators/roles.decorator.ts",
+        "../src/auth/guards/jwt-auth.guard.ts",
+        "../src/auth/guards/roles.guard.ts",
+        "../src/common/index.ts",
+        "../src/portfolio/dto/create-portfolio.dto.ts",
+        "../src/portfolio/dto/update-portfolio.dto.ts",
+        "../src/portfolio/portfolio.service.ts"
+      ],
+      "../src/portfolio/portfolio.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/notification/notification.module.ts",
+        "../src/portfolio/portfolio.controller.ts",
+        "../src/portfolio/portfolio.service.ts",
+        "../src/project/project.module.ts"
+      ],
+      "../src/portfolio/portfolio.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/common/index.ts",
+        "../src/portfolio/dto/create-portfolio.dto.ts",
+        "../src/portfolio/dto/update-portfolio.dto.ts",
+        "../src/project/project.service.ts",
+        "../src/utils/index.ts"
+      ],
       "../src/project/dto/create-project.dto.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -7788,6 +8396,8 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
+        "../node_modules/mongoose-plugin-autoinc/lib/index.d.ts",
+        "../src/notification/notification.module.ts",
         "../src/project/project.controller.ts",
         "../src/project/project.service.ts",
         "../src/project/schema/project.schema.ts"
@@ -7802,6 +8412,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/common/index.ts",
+        "../src/notification/notification.service.ts",
         "../src/project/dto/create-project.dto.ts",
         "../src/utils/index.ts"
       ],
@@ -7812,6 +8423,55 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/report/dto/create-report.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/report/report.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/auth/decorators/roles.decorator.ts",
+        "../src/auth/guards/jwt-auth.guard.ts",
+        "../src/auth/guards/roles.guard.ts",
+        "../src/common/index.ts",
+        "../src/report/dto/create-report.dto.ts",
+        "../src/report/report.service.ts"
+      ],
+      "../src/report/report.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/notification/notification.module.ts",
+        "../src/project/project.module.ts",
+        "../src/report/report.controller.ts",
+        "../src/report/report.service.ts"
+      ],
+      "../src/report/report.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/common/index.ts",
+        "../src/notification/notification.service.ts",
+        "../src/project/project.service.ts",
+        "../src/report/dto/create-report.dto.ts",
+        "../src/utils/index.ts"
       ],
       "../src/utils/index.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -9644,6 +10304,152 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/external/cors-options.interface.d.ts",
+        "../node_modules/@nestjs/common/interfaces/nest-application-options.interface.d.ts",
+        "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/adapters/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/adapters/express-adapter.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/adapters/index.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/interfaces/nest-express-application.interface.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interceptors/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interceptors/any-files.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/file-fields.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/file.interceptor.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interceptors/files.interceptor.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/index.d.ts": [
+        "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/interfaces/multer-options.interface.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/ts3.7/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@nestjs/platform-express/multer/multer.module.d.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/platform-express/multer/interfaces/files-upload-module.interface.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/@types/anymatch/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -9706,6 +10512,13 @@
         "../node_modules/@types/node/ts3.7/index.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@types/caseless/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/@types/color-name/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -9723,6 +10536,13 @@
         "../node_modules/@types/node/util.d.ts"
       ],
       "../node_modules/@types/cookiejar/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/debug/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -10354,6 +11174,33 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/@types/request/index.d.ts": [
+        "../node_modules/@types/caseless/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/ts3.7/index.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/request/node_modules/form-data/index.d.ts",
+        "../node_modules/@types/tough-cookie/index.d.ts"
+      ],
+      "../node_modules/@types/request/node_modules/form-data/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/ts3.7/index.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/@types/serve-static/index.d.ts": [
         "../node_modules/@types/express-serve-static-core/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -10397,6 +11244,13 @@
         "../node_modules/@types/superagent/index.d.ts"
       ],
       "../node_modules/@types/tapable/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/tough-cookie/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -11644,6 +12498,14 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../node_modules/mongoose-plugin-autoinc/lib/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -11658,6 +12520,14 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/pusher/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/request/index.d.ts"
       ],
       "../node_modules/reflect-metadata/index.d.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -12573,11 +13443,18 @@
       ],
       "../src/auth/jwt.strategy.ts": [
         "../node_modules/@types/passport-jwt/index.d.ts",
-        "../src/account/interfaces/account.interface.ts",
         "../src/auth/auth.service.ts"
       ],
       "../src/common/index.ts": [
         "../src/common/dto/index.ts"
+      ],
+      "../src/guest/guest.controller.ts": [
+        "../src/account/account.service.ts",
+        "../src/common/index.ts",
+        "../src/project/project.service.ts"
+      ],
+      "../src/investment/investment.service.ts": [
+        "../src/project/project.service.ts"
       ],
       "../src/investor/investor.controller.ts": [
         "../src/account/account.service.ts",
@@ -12585,6 +13462,28 @@
         "../src/account/dto/update-account.dto.ts",
         "../src/account/interfaces/account.interface.ts",
         "../src/common/index.ts"
+      ],
+      "../src/notification/notification.controller.ts": [
+        "../src/notification/notification.service.ts"
+      ],
+      "../src/notification/notification.service.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/notification/dto/create-notification.dto.ts"
+      ],
+      "../src/notification/schema/notification.schema.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/portfolio/portfolio.controller.ts": [
+        "../src/common/index.ts",
+        "../src/portfolio/dto/create-portfolio.dto.ts",
+        "../src/portfolio/dto/update-portfolio.dto.ts",
+        "../src/portfolio/portfolio.service.ts"
+      ],
+      "../src/portfolio/portfolio.service.ts": [
+        "../src/common/index.ts",
+        "../src/portfolio/dto/create-portfolio.dto.ts",
+        "../src/portfolio/dto/update-portfolio.dto.ts",
+        "../src/project/project.service.ts"
       ],
       "../src/project/project.controller.ts": [
         "../src/common/index.ts",
@@ -12594,10 +13493,22 @@
       "../src/project/project.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/common/index.ts",
+        "../src/notification/notification.service.ts",
         "../src/project/dto/create-project.dto.ts"
       ],
       "../src/project/schema/project.schema.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/report/report.controller.ts": [
+        "../src/common/index.ts",
+        "../src/report/dto/create-report.dto.ts",
+        "../src/report/report.service.ts"
+      ],
+      "../src/report/report.service.ts": [
+        "../src/common/index.ts",
+        "../src/notification/notification.service.ts",
+        "../src/project/project.service.ts",
+        "../src/report/dto/create-report.dto.ts"
       ],
       "../src/utils/index.ts": [
         "../src/common/index.ts"

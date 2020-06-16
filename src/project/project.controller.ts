@@ -1,4 +1,4 @@
-import { Controller, Get, UseGuards, Query, Post, Body, Param, Delete, Put } from '@nestjs/common';
+import { Controller, Get, UseGuards, Query, Post, Body, Param, Delete, Put, Request } from '@nestjs/common';
 import { ProjectService } from './project.service';
 import { Roles } from 'src/auth/decorators/roles.decorator';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
@@ -11,21 +11,19 @@ export class ProjectController {
     constructor(private projectsService: ProjectService) { }
 
     @Get()
-    @Roles("ADMIN", "MINISTRY")
     @UseGuards(JwtAuthGuard, RolesGuard)
-    async getList(@Query() getListDto: GetListDto) {
-        return await this.projectsService.getListProject(getListDto);
+    async getList(@Query() getListDto: GetListDto, @Request() req) {
+        return await this.projectsService.getListProject(getListDto, req.user);
     }
 
     @Post()
     @Roles("ADMIN", "MINISTRY")
     @UseGuards(JwtAuthGuard, RolesGuard)
-    async createProject(@Body() createProjectDto: CreateProjectDto) {
-        return await this.projectsService.createProject(createProjectDto);
+    async createProject(@Body() createProjectDto: CreateProjectDto, @Request() req) {
+        return await this.projectsService.createProject(createProjectDto, req.user._id);
     }
 
     @Get(":_id")
-    @Roles("ADMIN", "MINISTRY")
     @UseGuards(JwtAuthGuard, RolesGuard)
     async getProject(@Param() getProjectDto: GetDto) {
         return await this.projectsService.getProject(getProjectDto);

@@ -12,14 +12,23 @@ const project_service_1 = require("./project.service");
 const project_controller_1 = require("./project.controller");
 const mongoose_1 = require("@nestjs/mongoose");
 const project_schema_1 = require("./schema/project.schema");
+const notification_module_1 = require("../notification/notification.module");
+const mongoose_plugin_autoinc_1 = require("mongoose-plugin-autoinc");
 let ProjectModule = (() => {
     let ProjectModule = class ProjectModule {
     };
     ProjectModule = __decorate([
         common_1.Module({
-            imports: [mongoose_1.MongooseModule.forFeature([{ name: 'Project', schema: project_schema_1.ProjectSchema }])],
+            imports: [mongoose_1.MongooseModule.forFeatureAsync([{
+                        name: 'Project', useFactory: () => {
+                            const schema = project_schema_1.ProjectSchema;
+                            schema.plugin(mongoose_plugin_autoinc_1.autoIncrement, "Project");
+                            return schema;
+                        },
+                    }]), notification_module_1.NotificationModule],
             providers: [project_service_1.ProjectService],
-            controllers: [project_controller_1.ProjectController]
+            controllers: [project_controller_1.ProjectController],
+            exports: [project_service_1.ProjectService]
         })
     ], ProjectModule);
     return ProjectModule;

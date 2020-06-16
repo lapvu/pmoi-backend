@@ -29,7 +29,12 @@ let JwtStrategy = (() => {
             if (!user) {
                 throw new common_1.UnauthorizedException();
             }
-            return user;
+            return {
+                _id: user._id,
+                username: user.username,
+                roles: user.roles,
+                accountType: user.accountType
+            };
         }
     };
     JwtStrategy = __decorate([

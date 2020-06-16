@@ -4,6 +4,11 @@ declare const JwtStrategy_base: new (...args: any[]) => Strategy;
 export declare class JwtStrategy extends JwtStrategy_base {
     private authService;
     constructor(authService: AuthService);
-    validate(payload: any): Promise<import("../account/interfaces/account.interface").Account>;
+    validate(payload: any): Promise<{
+        _id: any;
+        username: any;
+        roles: any;
+        accountType: any;
+    }>;
 }
 export {};

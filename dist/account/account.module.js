@@ -12,12 +12,13 @@ const account_service_1 = require("./account.service");
 const account_controller_1 = require("./account.controller");
 const mongoose_1 = require("@nestjs/mongoose");
 const account_schema_1 = require("./schema/account.schema");
+const notification_module_1 = require("../notification/notification.module");
 let AccountModule = (() => {
     let AccountModule = class AccountModule {
     };
     AccountModule = __decorate([
         common_1.Module({
-            imports: [mongoose_1.MongooseModule.forFeature([{ name: 'Account', schema: account_schema_1.AccountSchema }])],
+            imports: [mongoose_1.MongooseModule.forFeature([{ name: 'Account', schema: account_schema_1.AccountSchema }]), notification_module_1.NotificationModule],
             providers: [account_service_1.AccountService],
             exports: [account_service_1.AccountService],
             controllers: [account_controller_1.AccountController],
