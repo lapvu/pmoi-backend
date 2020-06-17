@@ -9,6 +9,7 @@ import { ReportModule } from './report/report.module';
 import { InvestmentModule } from './investment/investment.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { GuestModule } from './guest/guest.module';
+import { ResourcesModule } from './resources/resources.module';
 
 
 @Module({
@@ -21,7 +22,8 @@ import { GuestModule } from './guest/guest.module';
     ReportModule,
     InvestmentModule,
     PortfolioModule,
-    GuestModule],
+    GuestModule,
+    ResourcesModule],
   controllers: [],
   providers: [],
 })

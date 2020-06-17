@@ -8,7 +8,7 @@ export declare class AccountService {
     constructor(accountModel: Model<Account>);
     create(createAccountDto: CreateAccountDto): Promise<Account>;
     findOneByUsername(username: any): Promise<Account>;
-    getListAccount(getlistDto: GetListDto): Promise<any>;
+    getListAccount(getlistDto: GetListDto, href: string): Promise<any>;
     getListInvestor(getlistDto: GetListDto): Promise<any>;
     deleteAccount(deleteDto: DeleteDto): Promise<any>;
     deleteInvestor(deleteDto: DeleteDto): Promise<any>;

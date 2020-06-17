@@ -44,7 +44,10 @@ let AccountService = (() => {
         async findOneByUsername(username) {
             return await this.accountModel.findOne({ username });
         }
-        async getListAccount(getlistDto) {
+        async getListAccount(getlistDto, href) {
+            if (href && href.includes("/project/create")) {
+                return await this.getListInvestor(getlistDto);
+            }
             const query = utils_1.convertQueryParams(getlistDto);
             query._filter["accountType"] = { $not: { $eq: "ADMIN" } };
             const result = await this.accountModel
@@ -93,16 +96,44 @@ let AccountService = (() => {
             };
         }
         async updateAccount(getADto, updateAccountDto) {
-            const result = await this.accountModel.updateOne(getADto, updateAccountDto);
-            return {
-                data: result
-            };
+            try {
+                const result = await this.accountModel.updateOne(getADto, updateAccountDto);
+                return {
+                    data: result
+                };
+            }
+            catch (err) {
+                if (err.code === 11000 && err.keyPattern.username === 1) {
+                    throw new common_1.NotFoundException("Tên tài khoản đã tồn tại!");
+                }
+                if (err.code === 11000 && err.keyPattern.email === 1) {
+                    throw new common_1.NotFoundException("Email đã tồn tại!");
+                }
+                if (err.code === 11000 && err.keyPattern.investorName === 1) {
+                    throw new common_1.NotFoundException("Chủ đầu tư đã tồn tại!");
+                }
+                throw new common_1.NotFoundException(err);
+            }
         }
         async updateInvestor(getADto, updateAccountDto) {
-            const result = await this.accountModel.updateOne(Object.assign(Object.assign({}, getADto), { accountType: "INVESTOR" }), updateAccountDto);
-            return {
-                data: result
-            };
+            try {
+                const result = await this.accountModel.updateOne(Object.assign(Object.assign({}, getADto), { accountType: "INVESTOR" }), updateAccountDto);
+                return {
+                    data: result
+                };
+            }
+            catch (err) {
+                if (err.code === 11000 && err.keyPattern.username === 1) {
+                    throw new common_1.NotFoundException("Tên tài khoản đã tồn tại!");
+                }
+                if (err.code === 11000 && err.keyPattern.email === 1) {
+                    throw new common_1.NotFoundException("Email đã tồn tại!");
+                }
+                if (err.code === 11000 && err.keyPattern.investorName === 1) {
+                    throw new common_1.NotFoundException("Chủ đầu tư đã tồn tại!");
+                }
+                throw new common_1.NotFoundException(err);
+            }
         }
     };
     AccountService = __decorate([

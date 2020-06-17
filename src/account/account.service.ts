@@ -34,7 +34,10 @@ export class AccountService {
         return await this.accountModel.findOne({ username });
     }
 
-    async getListAccount(getlistDto: GetListDto): Promise<any> {
+    async getListAccount(getlistDto: GetListDto, href: string): Promise<any> {
+        if (href && href.includes("/project/create")) {
+            return await this.getListInvestor(getlistDto)
+        }
         const query = convertQueryParams(getlistDto);
         query._filter["accountType"] = { $not: { $eq: "ADMIN" } }
         const result = await this.accountModel
@@ -89,16 +92,42 @@ export class AccountService {
     }
 
     async updateAccount(getADto: GetDto, updateAccountDto: UpdateAccountDto): Promise<any> {
-        const result = await this.accountModel.updateOne(getADto, updateAccountDto)
-        return {
-            data: result
+        try {
+            const result = await this.accountModel.updateOne(getADto, updateAccountDto)
+            return {
+                data: result
+            }
+        } catch (err) {
+            if (err.code === 11000 && err.keyPattern.username === 1) {
+                throw new NotFoundException("Tên tài khoản đã tồn tại!");
+            }
+            if (err.code === 11000 && err.keyPattern.email === 1) {
+                throw new NotFoundException("Email đã tồn tại!");
+            }
+            if (err.code === 11000 && err.keyPattern.investorName === 1) {
+                throw new NotFoundException("Chủ đầu tư đã tồn tại!");
+            }
+            throw new NotFoundException(err);
         }
     }
 
     async updateInvestor(getADto: GetDto, updateAccountDto: UpdateAccountDto): Promise<any> {
-        const result = await this.accountModel.updateOne({ ...getADto, accountType: "INVESTOR" }, updateAccountDto)
-        return {
-            data: result
+        try {
+            const result = await this.accountModel.updateOne({ ...getADto, accountType: "INVESTOR" }, updateAccountDto)
+            return {
+                data: result
+            }
+        } catch (err) {
+            if (err.code === 11000 && err.keyPattern.username === 1) {
+                throw new NotFoundException("Tên tài khoản đã tồn tại!");
+            }
+            if (err.code === 11000 && err.keyPattern.email === 1) {
+                throw new NotFoundException("Email đã tồn tại!");
+            }
+            if (err.code === 11000 && err.keyPattern.investorName === 1) {
+                throw new NotFoundException("Chủ đầu tư đã tồn tại!");
+            }
+            throw new NotFoundException(err);
         }
     }
 }

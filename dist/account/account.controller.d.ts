@@ -6,7 +6,7 @@ export declare class AccountController {
     private accountService;
     constructor(accountService: AccountService);
     create(createAccountDto: CreateAccountDto): Promise<import("./interfaces/account.interface").Account>;
-    getList(getListDto: GetListDto): Promise<any>;
+    getList(getListDto: GetListDto, href: any): Promise<any>;
     getAccount(getDto: GetDto): Promise<any>;
     delete(deleteAccountDto: DeleteDto): Promise<any>;
     update(getAccountDto: GetDto, updateAccountDto: UpdateAccountDto): Promise<any>;

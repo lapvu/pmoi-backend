@@ -18,6 +18,7 @@ const report_module_1 = require("./report/report.module");
 const investment_module_1 = require("./investment/investment.module");
 const portfolio_module_1 = require("./portfolio/portfolio.module");
 const guest_module_1 = require("./guest/guest.module");
+const resources_module_1 = require("./resources/resources.module");
 let AppModule = (() => {
     let AppModule = class AppModule {
     };
@@ -32,7 +33,8 @@ let AppModule = (() => {
                 report_module_1.ReportModule,
                 investment_module_1.InvestmentModule,
                 portfolio_module_1.PortfolioModule,
-                guest_module_1.GuestModule],
+                guest_module_1.GuestModule,
+                resources_module_1.ResourcesModule],
             controllers: [],
             providers: [],
         })
