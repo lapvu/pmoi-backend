@@ -23,11 +23,17 @@ let GuestController = (() => {
             this.projectService = projectService;
             this.accountSerive = accountSerive;
         }
-        async getProject(getListDto) {
+        async getListProject(getListDto) {
             return this.projectService.getListProject(getListDto, { accountType: null });
         }
-        async getInvestor(getListDto) {
+        async getListInvestor(getListDto) {
             return this.accountSerive.getListInvestor(getListDto);
+        }
+        async getProject(getDto) {
+            return this.projectService.getProject(getDto);
+        }
+        async getInvestor(getDto) {
+            return this.accountSerive.getInvestor(getDto);
         }
     };
     __decorate([
@@ -36,12 +42,26 @@ let GuestController = (() => {
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [common_2.GetListDto]),
         __metadata("design:returntype", Promise)
-    ], GuestController.prototype, "getProject", null);
+    ], GuestController.prototype, "getListProject", null);
     __decorate([
         common_1.Get("investor"),
         __param(0, common_1.Query()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [common_2.GetListDto]),
+        __metadata("design:returntype", Promise)
+    ], GuestController.prototype, "getListInvestor", null);
+    __decorate([
+        common_1.Get("project/:_id"),
+        __param(0, common_1.Query()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [common_2.GetDto]),
+        __metadata("design:returntype", Promise)
+    ], GuestController.prototype, "getProject", null);
+    __decorate([
+        common_1.Get("investor/:_id"),
+        __param(0, common_1.Query()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [common_2.GetDto]),
         __metadata("design:returntype", Promise)
     ], GuestController.prototype, "getInvestor", null);
     GuestController = __decorate([
