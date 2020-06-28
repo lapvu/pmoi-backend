@@ -59,7 +59,8 @@ exports.ChildProjectSchema = new mongoose.Schema({
 exports.ProjectSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     treasuryAddress: {
         type: String,
@@ -90,10 +91,12 @@ exports.ProjectSchema = new mongoose.Schema({
         type: [String]
     },
     approvedInvestment: {
-        type: String
+        type: String,
+        unique: true
     },
     initInvestment: {
-        type: String
+        type: String,
+        unique: true
     },
     approvedInvestmentTime: {
         type: Date

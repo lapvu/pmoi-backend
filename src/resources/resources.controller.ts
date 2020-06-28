@@ -12,28 +12,28 @@ export class ResourcesController {
     constructor(private resourcesService: ResourcesService) { }
 
     @Post()
-    @Roles("MINISTRY")
+    @Roles("ADMIN", "MINISTRY")
     @UseGuards(JwtAuthGuard, RolesGuard)
     async create(@Body() createResourcesDto: CreateResourcesDto) {
         return await this.resourcesService.createResources(createResourcesDto);
     }
 
     @Get()
-    @Roles("MINISTRY")
+    @Roles("ADMIN", "MINISTRY")
     @UseGuards(JwtAuthGuard, RolesGuard)
     async getList(@Query() getListDto: GetListDto) {
         return await this.resourcesService.getListResources(getListDto);
     }
 
     @Get(":_id")
-    @Roles("MINISTRY")
+    @Roles("ADMIN", "MINISTRY")
     @UseGuards(JwtAuthGuard, RolesGuard)
     async getAccount(@Param() getDto: GetDto) {
         return await this.resourcesService.getResources(getDto);
     }
 
     @Delete(':_id')
-    @Roles("MINISTRY")
+    @Roles("ADMIN", "MINISTRY")
     @UseGuards(JwtAuthGuard, RolesGuard)
     async delete(@Param() deleteDto: DeleteDto) {
         return await this.resourcesService.deleteResources(deleteDto);

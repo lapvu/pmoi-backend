@@ -15,10 +15,10 @@ const project_module_1 = require("./project/project.module");
 const investor_module_1 = require("./investor/investor.module");
 const notification_module_1 = require("./notification/notification.module");
 const report_module_1 = require("./report/report.module");
-const investment_module_1 = require("./investment/investment.module");
 const portfolio_module_1 = require("./portfolio/portfolio.module");
 const guest_module_1 = require("./guest/guest.module");
 const resources_module_1 = require("./resources/resources.module");
+const disbursement_module_1 = require("./disbursement/disbursement.module");
 let AppModule = (() => {
     let AppModule = class AppModule {
     };
@@ -31,10 +31,10 @@ let AppModule = (() => {
                 investor_module_1.InvestorModule,
                 notification_module_1.NotificationModule,
                 report_module_1.ReportModule,
-                investment_module_1.InvestmentModule,
                 portfolio_module_1.PortfolioModule,
                 guest_module_1.GuestModule,
-                resources_module_1.ResourcesModule],
+                resources_module_1.ResourcesModule,
+                disbursement_module_1.DisbursementModule],
             controllers: [],
             providers: [],
         })

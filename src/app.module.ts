@@ -6,10 +6,10 @@ import { ProjectModule } from './project/project.module';
 import { InvestorModule } from './investor/investor.module';
 import { NotificationModule } from './notification/notification.module';
 import { ReportModule } from './report/report.module';
-import { InvestmentModule } from './investment/investment.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { GuestModule } from './guest/guest.module';
 import { ResourcesModule } from './resources/resources.module';
+import { DisbursementModule } from './disbursement/disbursement.module';
 
 
 @Module({
@@ -20,10 +20,10 @@ import { ResourcesModule } from './resources/resources.module';
     InvestorModule,
     NotificationModule,
     ReportModule,
-    InvestmentModule,
     PortfolioModule,
     GuestModule,
-    ResourcesModule],
+    ResourcesModule,
+    DisbursementModule],
   controllers: [],
   providers: [],
 })

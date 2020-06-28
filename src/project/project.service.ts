@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Document } from 'mongoose';
 import { GetListDto, GetDto, DeleteDto } from 'src/common';
@@ -96,9 +96,22 @@ export class ProjectService {
     }
 
     async createProject(createProjectDto: CreateProjectDto, _id: string): Promise<any> {
-        const project = new this.projectModel(createProjectDto);
-        const result: any = await project.save();
-        return result;
+        try {
+            const project = new this.projectModel(createProjectDto);
+            const result: any = await project.save();
+            return result;
+        } catch (err) {
+            if (err.code === 11000 && err.keyPattern.name === 1) {
+                throw new NotFoundException("Tên dự án đã tồn tại!");
+            }
+            if (err.code === 11000 && err.keyPattern.approvedInvestment === 1) {
+                throw new NotFoundException("QD duyệt chủ trương đầu tư đã tồn tại!");
+            }
+            if (err.code === 11000 && err.keyPattern.initInvestment === 1) {
+                throw new NotFoundException("QD dự án đầu tư ban đầu đã tồn tại!");
+            }
+            throw new NotFoundException(err);
+        }
     }
 
     async getProject(getProjectdto: GetDto): Promise<any> {

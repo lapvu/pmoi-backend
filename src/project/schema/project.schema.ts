@@ -60,7 +60,8 @@ export const ChildProjectSchema = new mongoose.Schema({
 export const ProjectSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     //dia chi kho bac
     treasuryAddress: {
@@ -101,11 +102,13 @@ export const ProjectSchema = new mongoose.Schema({
     },
     //QD duyệt chủ trương đầu tư
     approvedInvestment: {
-        type: String
+        type: String,
+        unique: true
     },
     //QD dự án đầu tư ban đầu
     initInvestment: {
-        type: String
+        type: String,
+        unique: true
     },
     approvedInvestmentTime: {
         type: Date

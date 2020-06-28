@@ -12,34 +12,34 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ResourcesController = void 0;
+exports.DisbursementController = void 0;
 const common_1 = require("@nestjs/common");
-const resources_service_1 = require("./resources.service");
+const disbursement_service_1 = require("./disbursement.service");
 const roles_decorator_1 = require("../auth/decorators/roles.decorator");
 const jwt_auth_guard_1 = require("../auth/guards/jwt-auth.guard");
 const roles_guard_1 = require("../auth/guards/roles.guard");
 const common_2 = require("../common");
-const create_resources_dto_1 = require("./dto/create-resources.dto");
-const update_resources_dto_1 = require("./dto/update-resources.dto");
-let ResourcesController = (() => {
-    let ResourcesController = class ResourcesController {
-        constructor(resourcesService) {
-            this.resourcesService = resourcesService;
+const create_disbursement_dto_1 = require("./dto/create-disbursement.dto");
+const update_disbursement_dto_1 = require("./dto/update-disbursement.dto");
+let DisbursementController = (() => {
+    let DisbursementController = class DisbursementController {
+        constructor(disbursementService) {
+            this.disbursementService = disbursementService;
         }
-        async create(createResourcesDto) {
-            return await this.resourcesService.createResources(createResourcesDto);
+        create(createDisbursementDto) {
+            return this.disbursementService.createDisbursement(createDisbursementDto);
         }
-        async getList(getListDto) {
-            return await this.resourcesService.getListResources(getListDto);
+        getList(getListDto) {
+            return this.disbursementService.getListDisbursement(getListDto);
         }
-        async getAccount(getDto) {
-            return await this.resourcesService.getResources(getDto);
+        get(getDto) {
+            return this.disbursementService.getDisbursement(getDto);
         }
-        async delete(deleteDto) {
-            return await this.resourcesService.deleteResources(deleteDto);
+        update(getDto, updateDisbursementDto) {
+            return this.disbursementService.updateDisbursement(getDto, updateDisbursementDto);
         }
-        async update(getDto, updateResourcesDto) {
-            return await this.resourcesService.updateResources(getDto, updateResourcesDto);
+        delete(getDto) {
+            return this.disbursementService.deleteDisbursement(getDto);
         }
     };
     __decorate([
@@ -48,9 +48,9 @@ let ResourcesController = (() => {
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
         __param(0, common_1.Body()),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [create_resources_dto_1.CreateResourcesDto]),
-        __metadata("design:returntype", Promise)
-    ], ResourcesController.prototype, "create", null);
+        __metadata("design:paramtypes", [create_disbursement_dto_1.CreateDisbursementDto]),
+        __metadata("design:returntype", void 0)
+    ], DisbursementController.prototype, "create", null);
     __decorate([
         common_1.Get(),
         roles_decorator_1.Roles("ADMIN", "MINISTRY"),
@@ -58,40 +58,40 @@ let ResourcesController = (() => {
         __param(0, common_1.Query()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [common_2.GetListDto]),
-        __metadata("design:returntype", Promise)
-    ], ResourcesController.prototype, "getList", null);
+        __metadata("design:returntype", void 0)
+    ], DisbursementController.prototype, "getList", null);
     __decorate([
         common_1.Get(":_id"),
         roles_decorator_1.Roles("ADMIN", "MINISTRY"),
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
-        __param(0, common_1.Param()),
+        __param(0, common_1.Query()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [common_2.GetDto]),
-        __metadata("design:returntype", Promise)
-    ], ResourcesController.prototype, "getAccount", null);
+        __metadata("design:returntype", void 0)
+    ], DisbursementController.prototype, "get", null);
     __decorate([
-        common_1.Delete(':_id'),
+        common_1.Put(":_id"),
         roles_decorator_1.Roles("ADMIN", "MINISTRY"),
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
-        __param(0, common_1.Param()),
+        __param(0, common_1.Query()), __param(1, common_1.Body()),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [common_2.DeleteDto]),
-        __metadata("design:returntype", Promise)
-    ], ResourcesController.prototype, "delete", null);
+        __metadata("design:paramtypes", [common_2.GetDto, update_disbursement_dto_1.UpdateDisbursementDto]),
+        __metadata("design:returntype", void 0)
+    ], DisbursementController.prototype, "update", null);
     __decorate([
-        common_1.Put(':_id'),
-        roles_decorator_1.Roles("MINISTRY"),
+        common_1.Delete(":_id"),
+        roles_decorator_1.Roles("ADMIN", "MINISTRY"),
         common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard),
-        __param(0, common_1.Param()), __param(1, common_1.Body()),
+        __param(0, common_1.Query()),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [common_2.GetDto, update_resources_dto_1.UpdateResourcesDto]),
-        __metadata("design:returntype", Promise)
-    ], ResourcesController.prototype, "update", null);
-    ResourcesController = __decorate([
-        common_1.Controller('resources'),
-        __metadata("design:paramtypes", [resources_service_1.ResourcesService])
-    ], ResourcesController);
-    return ResourcesController;
+        __metadata("design:paramtypes", [common_2.GetDto]),
+        __metadata("design:returntype", void 0)
+    ], DisbursementController.prototype, "delete", null);
+    DisbursementController = __decorate([
+        common_1.Controller('disbursement'),
+        __metadata("design:paramtypes", [disbursement_service_1.DisbursementService])
+    ], DisbursementController);
+    return DisbursementController;
 })();
-exports.ResourcesController = ResourcesController;
-//# sourceMappingURL=resources.controller.js.map
+exports.DisbursementController = DisbursementController;
+//# sourceMappingURL=disbursement.controller.js.map

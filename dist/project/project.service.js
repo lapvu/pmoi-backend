@@ -107,9 +107,23 @@ let ProjectService = (() => {
             };
         }
         async createProject(createProjectDto, _id) {
-            const project = new this.projectModel(createProjectDto);
-            const result = await project.save();
-            return result;
+            try {
+                const project = new this.projectModel(createProjectDto);
+                const result = await project.save();
+                return result;
+            }
+            catch (err) {
+                if (err.code === 11000 && err.keyPattern.name === 1) {
+                    throw new common_1.NotFoundException("Tên dự án đã tồn tại!");
+                }
+                if (err.code === 11000 && err.keyPattern.approvedInvestment === 1) {
+                    throw new common_1.NotFoundException("QD duyệt chủ trương đầu tư đã tồn tại!");
+                }
+                if (err.code === 11000 && err.keyPattern.initInvestment === 1) {
+                    throw new common_1.NotFoundException("QD dự án đầu tư ban đầu đã tồn tại!");
+                }
+                throw new common_1.NotFoundException(err);
+            }
         }
         async getProject(getProjectdto) {
             const result = await this.projectModel.findOne(getProjectdto)

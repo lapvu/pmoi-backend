@@ -4,10 +4,16 @@ export const ResourcesSchema = new mongoose.Schema({
     name: {
         type: String
     },
-    sortName: {
+    shortName: {
         type: String
     },
     desc: {
         type: String
+    },
+    time: {
+        type: String,
+    },
+    amount: {
+        type: Number
     }
 }, { timestamps: { createdAt: "created_at" } });
